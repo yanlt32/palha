@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Vendas - Palha Italiana</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Controle de Vendas - Palha Italiana</h1>
+        
+        <!-- Seção para entrada de quantidade, horário e tipo de promoção -->
+        <div class="input-section">
+            <label>Selecione o Tipo de Promoção:</label>
+            <div class="radio-group">
+                <label for="1por7">
+                    <input type="radio" id="1por7" name="promocao" value="1por7" onclick="toggleQuantidade(false)"> 1 por R$7
+                </label>
+                <label for="2por12">
+                    <input type="radio" id="2por12" name="promocao" value="2por12" onclick="toggleQuantidade(false)"> 2 por R$12
+                </label>
+                <label for="maisDe2">
+                    <input type="radio" id="maisDe2" name="promocao" value="maisDe2" onclick="toggleQuantidade(true)"> Mais de 2 (R$7 cada)
+                </label>
+            </div>
+        </div>
+
+        <div class="input-section" id="quantidade-section">
+            <label for="quantidade">Quantidade de Palhas Italianas:</label>
+            <input type="number" id="quantidade" min="1" value="1">
+        </div>
+
+        <div class="input-section">
+            <label for="hora-inicio">Horário Início da Venda:</label>
+            <input type="time" id="hora-inicio" value="12:00">
+        </div>
+
+        <div class="input-section">
+            <label for="hora-fim">Horário Fim da Venda:</label>
+            <input type="time" id="hora-fim" value="13:00">
+        </div>
+
+        <button onclick="registrarVenda()">Registrar Venda</button>
+
+        <div class="result">
+            <p>Hora Início: <span id="hora-inicio-venda">-</span></p>
+            <p>Hora Fim: <span id="hora-fim-venda">-</span></p>
+            <p>Valor Total do Dia: R$ <span id="valor-total-dia">0.00</span></p>
+            <p>Vendas de 1 por 7: <span id="vendas-1por7">0</span></p>
+            <p>Vendas de 2 por 12: <span id="vendas-2por12">0</span></p>
+            <p>Vendas de Mais de 2: <span id="vendas-mais-de-2">0</span></p>
+            <p>Total de Palhas Vendidas: <span id="total-palhas-vendidas">0</span></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fce4ec;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 22px;
+    color: #e91e63;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.input-section {
+    margin: 15px 0;
+}
+
+input[type="number"],
+input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #f06292;
+    background-color: #fce4ec;
+    font-size: 16px;
+    color: #e91e63;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.radio-group label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #f06292;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #e91e63; /* Cor rosinha nos botões de rádio */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d81b60;
+}
+
+.result {
+    margin-top: 30px;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+}
+
+span {
+    font-weight: bold;
+    color: #e91e63;
+}
+
+#quantidade-section {
+    display: block;
+}
+
+#quantidade-section.hidden {
+    display: none;
+}
+
